@@ -1,16 +1,65 @@
-# React + Vite
+#  Movie Watchlist Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application built for **Week 2** of learning and practice core React concepts.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Description
 
-## React Compiler
+The Movie Watchlist Manager allows users to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Add movies with a title and genre
+- Mark movies as watched or unwatched
+- Filter movies (All / Watched / Unwatched)
+- Delete movies from the list
+- View live movie statistics
 
-## Expanding the ESLint configuration
+This project focuses on **React logic**, not CSS or design.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  React Concepts Used
+
+- useState (state management)
+- Event handling (onChange, onClick, onSubmit)
+- Lists and keys using `.map()`
+- Conditional rendering
+- Derived state (calculated during render)
+
+---
+
+##  Project Structure
+
+src/
+├── components/
+│ └── MovieItem.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+
+---
+
+##  Movie Data Model
+
+Each movie object looks like this:
+
+```js
+{
+  id: "unique-id",
+  title: "Inception",
+  genre: "Action",
+  watched: false
+}
+▶️ How to Run the Project
+Install dependencies:
+
+bash
+npm install
+Start the development server:
+
+bash
+npm run dev
+Open your browser:
+
+arduino
+http://localhost:5173
