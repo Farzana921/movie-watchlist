@@ -50,7 +50,7 @@ Each movie object looks like this:
   genre: "Action",
   watched: false
 }
-▶️ How to Run the Project
+How to Run the Project
 Install dependencies:
 
 bash
@@ -63,3 +63,22 @@ Open your browser:
 
 arduino
 http://localhost:5173
+
+(Assignment Requirements Met):
+
+- Functional components only
+
+- useState for state management
+
+- Events handled correctly
+
+- List rendering with unique keys
+
+- Conditional rendering implemented
+
+- Derived state calculated correctly
+
+👩‍💻 Author
+
+Farzana
+Week 2 – React Assignment
