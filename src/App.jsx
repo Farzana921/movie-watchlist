@@ -4,29 +4,29 @@ import MovieItem from "./components/MovieItem";
 const GENRES = ["Action", "Drama", "Comedy", "Sci-Fi", "Horror", "Romance"];
 
 function App() {
-  // Movies list
+  //Movies list
   const [movies, setMovies] = useState([]);
 
-  // Form inputs
+  //Form inputs
   const [title, setTitle] = useState("");
   const [genre, setGenre] = useState(GENRES[0]);
 
-  // Filter state
+  //Filter state
   const [filter, setFilter] = useState("All");
 
-  // Counts (derived from movies)
-  const totalMovies = movies.length;
+  
+  const totalMovies = movies.length; // counts (derived from movies)
   const watchedCount = movies.filter((m) => m.watched).length;
   const unwatchedCount = movies.filter((m) => !m.watched).length;
 
-  // Filter movies based on selected filter
-  const filteredMovies = movies.filter((m) => {
+  
+  const filteredMovies = movies.filter((m) => { // filter movies based on selected filter
     if (filter === "Watched") return m.watched;
     if (filter === "Unwatched") return !m.watched;
     return true;
   });
 
-  // Add new movie
+  //add new movie
   function handleAddMovie(e) {
     e.preventDefault();
 
@@ -45,7 +45,7 @@ function App() {
     setGenre(GENRES[0]);
   }
 
-  // Toggle watched status
+  // toggle status
   function handleToggleWatched(id) {
     setMovies((prev) =>
       prev.map((m) =>
@@ -54,7 +54,7 @@ function App() {
     );
   }
 
-  // Delete movie
+  //delete movie
   function handleDelete(id) {
     setMovies((prev) => prev.filter((m) => m.id !== id));
   }
@@ -95,7 +95,7 @@ function App() {
         </button>
       </form>
 
-      {/* Filter buttons */}
+      {/*Filter buttons*/}
       <div>
         <strong>Filter:</strong>{" "}
         <button onClick={() => setFilter("All")}>All</button>
@@ -103,7 +103,7 @@ function App() {
         <button onClick={() => setFilter("Unwatched")}>Unwatched</button>
       </div>
 
-      {/* Movie summary */}
+      {/*movie summary*/}
       <p>
         Total: {totalMovies} | Watched: {watchedCount} | Unwatched:{" "}
         {unwatchedCount}
@@ -113,7 +113,7 @@ function App() {
         <p>You watched everything!</p>
       )}
 
-      {/* Movie list */}
+      {/*movie list*/}
       <h2>Movies</h2>
 
       {filteredMovies.length === 0 ? (
