@@ -60,8 +60,8 @@ function App() {
   }
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Week 2: Movie Watchlist Manager</h1>
+    <div className="container">
+    <h1>Week 2: Movie Watchlist Manager</h1>
 
       {/* Add movie form */}
       <form onSubmit={handleAddMovie}>
